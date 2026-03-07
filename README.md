@@ -1,59 +1,60 @@
-# spot.sh
+# spot.sh 🎵
 
 A sleek, privacy-focused terminal-style dashboard for your Spotify listening analytics. Built with React, Vite, and Node.js.
 
-![Dashboard Preview](frontend/public/preview.png)
+## 🚀 Quick Setup Guide
 
-## Overview
+To get **spot.sh** running locally, follow these exact steps to set up your Spotify credentials.
 
-spot.sh transforms your Spotify data into a high-fidelity terminal interface. It provides detailed insights into your listening habits without the clutter of traditional analytics tools.
+### 1. Get Your Spotify API Keys
+1.  Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
+2.  Log in with your Spotify account.
+3.  Click **Create app**.
+4.  **App name**: `spot.sh` (or anything you like).
+5.  **App description**: "My personal analytics terminal".
+6.  **Redirect URIs**: You **MUST** add this exactly: `http://localhost:5000/callback`
+7.  Check the boxes for API/SDK and Web API.
+8.  Click **Save**.
+9.  Inside your new app, click **Settings**.
+10. Copy your **Client ID** and **Client Secret**.
 
-### Key Features
-- **Real-Time Analytics**: Monitor your top tracks, artists, and recent listening activity with low-latency updates.
-- **Deep Insights**: Visualizations for genre distribution and peak listening hours.
-- **Privacy First**: No third-party tracking or data storage. All analytics are generated on-the-fly from the Spotify API.
-- **Custom Terminal UI**: A unique monospace aesthetic featuring ASCII art and a responsive "main-frame" inspired layout.
+### 2. Configure Environment Variables
+1.  Navigate to the `backend` folder.
+2.  Create a new file named `.env` (or rename `.env.example`).
+3.  Paste your keys into the file like this:
+    ```env
+    SPOTIFY_CLIENT_ID=your_client_id_here
+    SPOTIFY_CLIENT_SECRET=your_client_secret_here
+    SESSION_SECRET=create_any_random_string_here
+    FRONTEND_URL=http://localhost:5173
+    PORT=5000
+    ```
 
-## Tech Stack
-- **Frontend**: React, Tailwind CSS, Recharts, Vite
-- **Backend**: Node.js, Express, Spotify Web API (OAuth 2.0)
+### 3. Installation & Launch
 
-## Getting Started
+**Backend:**
+```bash
+cd backend
+npm install
+npm start
+```
 
-### Prerequisites
-- Node.js (v16 or higher)
-- A Spotify Developer account and App credentials.
+**Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-### Installation
+Now open [http://localhost:5173](http://localhost:5173) in your browser and click **Connect with Spotify**.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/spot.sh.git
-   cd spot.sh
-   ```
+---
 
-2. **Backend Configuration**
-   ```bash
-   cd backend
-   npm install
-   cp .env.example .env
-   # Open .env and add your SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
-   npm start
-   ```
+## 🛠️ Tech Stack
+-   **Frontend**: React, Tailwind CSS, Recharts, Vite
+-   **Backend**: Node.js, Express, Spotify Web API (OAuth 2.0)
 
-3. **Frontend Configuration**
-   ```bash
-   cd ../frontend
-   npm install
-   npm run dev
-   ```
-
-4. **Launch**
-   Access the dashboard at `http://localhost:5173`.
-
-## Deployment
-
-Ensure `FRONTEND_URL` and `PORT` are correctly configured in your production environment variables. The application is designed to be easily containerized or deployed to platforms like Vercel or Heroku.
-
-## License
-MIT
+## 🔒 Privacy
+-   **Zero Data Storage**: We do not store your Spotify data.
+-   **Local Only**: Your API keys stay on your machine (via the `.env` file).
+-   **Direct API**: All data is fetched directly from Spotify to your browser.
