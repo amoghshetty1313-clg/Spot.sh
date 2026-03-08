@@ -2,6 +2,12 @@
 
 A sleek, privacy-focused terminal-style dashboard for your Spotify listening analytics. Built with React, Vite, and Node.js.
 
+## Login Page
+ ![login page Screenshot](./assets/loginpg.png)
+
+## Dashboard 
+ ![Dashboard Screenshot](./assets/mainpg.png)
+
 ## 🚀 Quick Setup Guide
 
 To get **spot.sh** running locally, follow these exact steps to set up your Spotify credentials.
@@ -58,9 +64,3 @@ Now open [http://localhost:5173](http://localhost:5173) in your browser and clic
 -   **Zero Data Storage**: We do not store your Spotify data.
 -   **Local Only**: Your API keys stay on your machine (via the `.env` file).
 -   **Direct API**: All data is fetched directly from Spotify to your browser.
-<<<<<<< HEAD
-
-## 📜 License
-MIT
-=======
->>>>>>> 4eebfa0a0b2848c5b3a0b8452ac3e388bfa186b3
