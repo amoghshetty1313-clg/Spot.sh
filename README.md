@@ -58,6 +58,9 @@ Now open [http://localhost:5173](http://localhost:5173) in your browser and clic
 -   **Zero Data Storage**: We do not store your Spotify data.
 -   **Local Only**: Your API keys stay on your machine (via the `.env` file).
 -   **Direct API**: All data is fetched directly from Spotify to your browser.
+<<<<<<< HEAD
 
 ## 📜 License
 MIT
+=======
+>>>>>>> 4eebfa0a0b2848c5b3a0b8452ac3e388bfa186b3
