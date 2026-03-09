@@ -1,11 +1,21 @@
 # spot.sh 🎵
 
-A sleek, privacy-focused terminal-style dashboard for your Spotify listening analytics. Built with React, Vite, and Node.js.
+A clean, privacy-focused Spotify listening analytics dashboard built with React, Vite, and Node.js.
 
-## Login Page
+spot.sh lets you log in with Spotify and visualize your listening data such as:
+- Top artists
+- Top tracks
+- Listening history
+- Personalized stats
+
+All displayed in a modern Spotify-inspired dashboard.
+
+## Preview
+
+### Login Page
  ![login page Screenshot](./assets/loginpg.png)
 
-## Dashboard 
+### Dashboard 
  ![Dashboard Screenshot](./assets/mainpg.png)
 
 ## 🚀 Quick Setup Guide
